@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Hello</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Ystävät</h1>
+		<table>
+			<tr th:each="Friend: ${friends}">
+				<td th:text="${Friend.firstName}"></td>
+				<td th:text="${Friend.lastName}"></td>
+			</tr>
+		</table>		
+		
+		<h1>Lisää uusi ystävä</h1>
+		<form method="post">
+			<p>Etunimi: <input type="text" name="firstName"></p>
+			<p>Sukunimi: <input type="text" name="lastName" /></p>
+			<p><input type="submit" value="Submit" /></p>
+		</form>
+</body>
+</html>

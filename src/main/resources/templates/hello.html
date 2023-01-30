@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Hello</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<div>
+		<p th:text="'Hei ' + ${name} + ', ' + ${age} + ' vuotta!'" />
+		
+		<div th:if="${age} &lt; 17">
+			<p th:text="'Olet liian nuori, ' + ${name} + '!'" />
+		</div>
+	</div>
+</body>
+</html>
